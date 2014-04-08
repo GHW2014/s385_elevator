@@ -8,7 +8,7 @@
 DEF elevator Transform {
 	translation	0 0 0
 	children Transform {
-		translation	0 1.75 0
+		translation	0.0532053 1.64368 1.43051e-006
 		scale	1 1.75 1
 		children Shape {
 			appearance	Appearance {
@@ -22,12 +22,60 @@ DEF elevator Transform {
 			}
 
 			geometry	Box {
+				size	5 2 5
 			}
 
 		}
 	}
 }
 Transform {
+	translation	0 12 -10
+	rotation	0 0 1  0
+	scale	1 1 1
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.1
+				diffuseColor	0.8 0.8 0.8
+				emissiveColor	0 0 0
+				shininess	0.2
+				specularColor	0 0 0
+				transparency	0
+			}
+
+			texture	ImageTexture {
+				url	"texture/Ciment.jpg"
+			}
+
+		}
+
+		geometry	Box {
+			size	20 25 0.1
+		}
+
+	}
+}
+Background {
+	groundAngle	[ 0.9, 1.5, 1.57 ]
+	groundColor	[ 0 0 0,
+			  0.174249 0.82 0.187362,
+			  0.467223 0.82 0.445801,
+			  0.210711 0.355557 0.37 ]
+	skyAngle	[ 0.1, 1.2, 1.57 ]
+	skyColor	[ 0.76238 0.8 0.1427,
+			  0.277798 0.219779 0.7,
+			  0.222549 0.390234 0.7,
+			  0.60094 0.662637 0.69 ]
+}
+SpotLight {
+	ambientIntensity	0
+	beamWidth	1.57077
+	direction	0 0 -1
+	intensity	1
+	location	0 30 0
+	radius	100
+}
+DEF RC Transform {
 	translation	0 0 0
 	scale	3 0.1 3
 	children Shape {
@@ -46,7 +94,32 @@ Transform {
 
 	}
 }
-Transform {
+DEF Foundation Transform {
+	translation	0.0801069 -1.11759e-006 0.156989
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.1
+				diffuseColor	0.8 0.8 0.8
+				emissiveColor	0 0 0
+				shininess	0.2
+				specularColor	0 0 0
+				transparency	0
+			}
+
+			texture	DEF Cement ImageTexture {
+				url	"texture/Cement.gif"
+			}
+
+		}
+
+		geometry	Box {
+			size	20 0.1 20
+		}
+
+	}
+}
+DEF Floor2 Transform {
 	translation	0 3.5 0
 	scale	3 0.1 3
 	children Shape {
@@ -61,11 +134,12 @@ Transform {
 		}
 
 		geometry	Box {
+			size	2 5 2
 		}
 
 	}
 }
-Transform {
+DEF Floor3 Transform {
 	translation	0 7 0
 	scale	3 0.1 3
 	children Shape {
@@ -80,11 +154,12 @@ Transform {
 		}
 
 		geometry	Box {
+			size	2 5 2
 		}
 
 	}
 }
-Transform {
+DEF Floor4 Transform {
 	translation	0 10.5 0
 	scale	3 0.1 3
 	children Shape {
@@ -99,11 +174,12 @@ Transform {
 		}
 
 		geometry	Box {
+			size	2 5 2
 		}
 
 	}
 }
-Transform {
+DEF Floor5 Transform {
 	translation	0 14 0
 	scale	3 0.1 3
 	children Shape {
@@ -118,11 +194,12 @@ Transform {
 		}
 
 		geometry	Box {
+			size	2 5 2
 		}
 
 	}
 }
-Transform {
+DEF Floor6 Transform {
 	translation	0 17.5 0
 	scale	3 0.1 3
 	children Shape {
@@ -137,6 +214,7 @@ Transform {
 		}
 
 		geometry	Box {
+			size	2 5 2
 		}
 
 	}

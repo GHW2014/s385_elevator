@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.20"
+    ComputedModelVersion    "1.25"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [776.0, 373.0, 1522.0, 484.0]
+      Location		      [6.0, 1.0, 1631.0, 603.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -54,9 +54,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1466.0, 249.0]
-	ZoomFactor		[1.0]
-	Offset			[0.0, 32.0]
+	Extents			[1575.0, 368.0]
+	ZoomFactor		[1.25]
+	Offset			[43.333333333332824, 1.5666666666667197]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Nate"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Apr 07 20:48:55 2014"
-  RTWModifiedTimeStamp	  318803944
-  ModelVersionFormat	  "1.%<AutoIncrement:20>"
+  LastModifiedDate	  "Tue Apr 08 00:59:08 2014"
+  RTWModifiedTimeStamp	  318819471
+  ModelVersionFormat	  "1.%<AutoIncrement:25>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -864,7 +864,7 @@ Model {
   }
   System {
     Name		    "s385"
-    Location		    [776, 373, 2298, 857]
+    Location		    [6, 1, 1637, 604]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -876,9 +876,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "27"
+    SIDHighWatermark	    "29"
     Block {
       BlockType		      Constant
       Name		      "1"
@@ -890,10 +890,16 @@ Model {
       BlockType		      TransferFcn
       Name		      "Acctuator"
       SID		      "2"
-      Position		      [665, 109, 825, 161]
+      Position		      [675, 109, 835, 161]
       ZOrder		      -2
       Numerator		      "num"
       Denominator	      "den"
+      Port {
+	PortNumber		1
+	Name			"Velocity Sensor"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
     }
     Block {
       BlockType		      Saturate
@@ -922,7 +928,7 @@ Model {
       Name		      "Convert to Displacement"
       SID		      "5"
       Ports		      [1, 1]
-      Position		      [880, 120, 910, 150]
+      Position		      [920, 120, 950, 150]
       ZOrder		      -5
       Port {
 	PortNumber		1
@@ -935,21 +941,13 @@ Model {
       BlockType		      Gain
       Name		      "Convert to Floor"
       SID		      "6"
-      Position		      [1065, 195, 1095, 225]
+      Position		      [245, 205, 275, 235]
       ZOrder		      -6
+      BlockMirror	      on
       Gain		      "1/3.5"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Current Destination Floor"
-      SID		      "7"
-      Ports		      [1]
-      Position		      [240, 45, 330, 75]
-      ZOrder		      -7
-      Decimation	      "1"
     }
     Block {
       BlockType		      Scope
@@ -959,48 +957,7 @@ Model {
       Position		      [1065, 119, 1095, 151]
       ZOrder		      -8
       Floating		      off
-      Location		      [67, 360, 1082, 654]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      ShowLegends	      off
-      YMin		      "17.491"
-      YMax		      "17.51"
-      DataFormat	      "StructureWithTime"
-      LimitDataPoints	      off
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Current Floor"
-      SID		      "9"
-      Ports		      [1]
-      Position		      [1140, 195, 1230, 225]
-      ZOrder		      -9
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain"
-      SID		      "10"
-      Position		      [1065, 40, 1095, 70]
-      ZOrder		      -10
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Output Velocity"
-      SID		      "11"
-      Ports		      [1]
-      Position		      [920, 39, 950, 71]
-      ZOrder		      -11
-      Floating		      off
-      Location		      [437, 609, 974, 847]
+      Location		      [650, 864, 1954, 1537]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -1018,8 +975,61 @@ Model {
 	MarkerStyles		"none|none|none|none|none|none"
       }
       ShowLegends	      off
-      YMin		      "-0.00045"
-      YMax		      "-5e-05"
+      YMin		      "-1"
+      YMax		      "8.5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Current Floor"
+      SID		      "9"
+      Ports		      [1]
+      Position		      [110, 205, 200, 235]
+      ZOrder		      -9
+      BlockMirror	      on
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "29"
+      Position		      [430, 120, 460, 150]
+      ZOrder		      8
+      Gain		      "1/3.5"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Output Velocity"
+      SID		      "11"
+      Ports		      [1]
+      Position		      [920, 39, 950, 71]
+      ZOrder		      -11
+      Floating		      off
+      Location		      [1378, 224, 1915, 462]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      off
+      YMin		      "-0.85"
+      YMax		      "0"
       SaveName		      "ScopeData1"
       DataFormat	      "StructureWithTime"
       SampleTime	      "0"
@@ -1041,9 +1051,9 @@ Model {
       IntegratorMethod	      "Forward Euler"
       FilterMethod	      "Forward Euler"
       Form		      "Parallel"
-      P			      "5"
-      I			      "24"
-      D			      "1"
+      P			      "Kp"
+      I			      "Ki"
+      D			      "Kd"
       N			      "100"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
@@ -1139,7 +1149,7 @@ Model {
       Name		      "PID Controller1"
       SID		      "27"
       Ports		      [1, 1]
-      Position		      [605, 117, 645, 153]
+      Position		      [615, 117, 655, 153]
       ZOrder		      7
       LibraryVersion	      "1.285"
       SourceBlock	      "simulink/Continuous/PID Controller"
@@ -1151,9 +1161,9 @@ Model {
       IntegratorMethod	      "Forward Euler"
       FilterMethod	      "Forward Euler"
       Form		      "Parallel"
-      P			      "1"
+      P			      "Kp2"
       I			      "1"
-      D			      "9"
+      D			      "Kd2"
       N			      "100"
       InitialConditionSource  "internal"
       InitialConditionForIntegrator "0"
@@ -1249,19 +1259,29 @@ Model {
       Name		      "Reference Velocity"
       SID		      "13"
       Ports		      [1]
-      Position		      [655, 39, 685, 71]
+      Position		      [520, 39, 550, 71]
       ZOrder		      -13
       Floating		      off
-      Location		      [53, 56, 539, 295]
+      Location		      [1461, 747, 1947, 986]
       Open		      off
       NumInputPorts	      "1"
       List {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
       }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
       ShowLegends	      off
-      YMin		      "-1e-013"
-      YMax		      "1.2e-012"
+      YMin		      "-5e-08"
+      YMax		      "3.30872e-24"
       SaveName		      "ScopeData2"
       DataFormat	      "StructureWithTime"
       SampleTime	      "0"
@@ -1299,7 +1319,7 @@ Model {
       Name		      "VR Signal Expander"
       SID		      "16"
       Ports		      [1, 1]
-      Position		      [1135, 36, 1230, 74]
+      Position		      [1035, 36, 1130, 74]
       ZOrder		      -16
       LibraryVersion	      "1.27"
       SourceBlock	      "vrlib/VR Signal Expander"
@@ -1313,7 +1333,7 @@ Model {
       Name		      "VR Sink"
       SID		      "17"
       Ports		      [1]
-      Position		      [1270, 19, 1365, 91]
+      Position		      [1165, 19, 1260, 91]
       ZOrder		      -17
       LibraryVersion	      "1.27"
       SourceBlock	      "vrlib/VR Sink"
@@ -1335,18 +1355,7 @@ Model {
       SID		      "18"
       Position		      [140, 117, 200, 153]
       ZOrder		      -18
-      Gain		      "[0]"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "vcut\ncompensation"
-      SID		      "19"
-      Position		      [435, 120, 465, 150]
-      ZOrder		      -19
-      Gain		      "1/3"
+      Gain		      "[\n1\n]"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1359,13 +1368,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      3
-      SrcBlock		      "Gain"
-      SrcPort		      1
-      DstBlock		      "VR Signal Expander"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      4
       SrcBlock		      "VR Signal Expander"
       SrcPort		      1
@@ -1373,20 +1375,14 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      5
-      SrcBlock		      "Convert to Floor"
-      SrcPort		      1
-      DstBlock		      "Current Floor"
-      DstPort		      1
-    }
-    Line {
+      Name		      "Velocity Sensor"
       ZOrder		      6
       SrcBlock		      "Acctuator"
       SrcPort		      1
-      Points		      [0, 0]
+      Points		      [12, 0]
       Branch {
 	ZOrder			42
-	Points			[30, 0]
+	Points			[25, 0]
 	Branch {
 	  ZOrder		  9
 	  DstBlock		  "Convert to Displacement"
@@ -1402,7 +1398,7 @@ Model {
       Branch {
 	ZOrder			40
 	Labels			[2, 0]
-	Points			[0, 44; -310, 0]
+	Points			[0, 55; -332, 0]
 	DstBlock		"Sum"
 	DstPort			2
       }
@@ -1418,18 +1414,8 @@ Model {
       ZOrder		      12
       SrcBlock		      "targetFloor"
       SrcPort		      1
-      Points		      [5, 0]
-      Branch {
-	ZOrder			13
-	DstBlock		"Convert to\nMeters"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			14
-	Points			[0, -75]
-	DstBlock		"Current Destination Floor"
-	DstPort			1
-      }
+      DstBlock		      "Convert to\nMeters"
+      DstPort		      1
     }
     Line {
       ZOrder		      15
@@ -1439,28 +1425,11 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      16
+      ZOrder		      114
       SrcBlock		      "Convert\nto\nVelocity\nscale w/ vcut"
       SrcPort		      1
-      DstBlock		      "vcut\ncompensation"
+      DstBlock		      "Gain"
       DstPort		      1
-    }
-    Line {
-      ZOrder		      17
-      SrcBlock		      "vcut\ncompensation"
-      SrcPort		      1
-      Points		      [15, 0]
-      Branch {
-	ZOrder			18
-	DstBlock		"Sum"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			19
-	Points			[0, -80]
-	DstBlock		"Reference Velocity"
-	DstPort			1
-      }
     }
     Line {
       ZOrder		      20
@@ -1475,32 +1444,31 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "Convert to Displacement"
       SrcPort		      1
-      Points		      [85, 0]
+      Points		      [45, 0]
       Branch {
-	ZOrder			22
-	DstBlock		"Current Displacement\nfrom Ground"
+	ZOrder			113
+	Points			[0, -80]
+	DstBlock		"VR Signal Expander"
 	DstPort			1
       }
       Branch {
-	ZOrder			23
-	Points			[0, 75]
+	ZOrder			96
+	Points			[0, 86; -690, 0; 0, -1]
 	Branch {
-	  ZOrder		  24
-	  Labels		  [2, 0]
-	  Points		  [0, 25; -690, 0]
+	  ZOrder		  128
+	  Labels		  [1, 0]
 	  DstBlock		  "Sum1"
 	  DstPort		  2
 	}
 	Branch {
-	  ZOrder		  25
+	  ZOrder		  109
 	  DstBlock		  "Convert to Floor"
 	  DstPort		  1
 	}
       }
       Branch {
-	ZOrder			26
-	Points			[0, -80]
-	DstBlock		"Gain"
+	ZOrder			22
+	DstBlock		"Current Displacement\nfrom Ground"
 	DstPort			1
       }
     }
@@ -1518,13 +1486,29 @@ Model {
       DstBlock		      "Acctuator"
       DstPort		      1
     }
-    Annotation {
-      SID		      "20"
-      Name		      "Velocity Sensor"
-      Position		      [691, 188, 691, 188]
-      AutoSize		      on
-      WordWrap		      off
-      ZOrder		      -1
+    Line {
+      ZOrder		      107
+      SrcBlock		      "Convert to Floor"
+      SrcPort		      1
+      DstBlock		      "Current Floor"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      115
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	ZOrder			18
+	DstBlock		"Sum"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			19
+	Points			[0, -80]
+	DstBlock		"Reference Velocity"
+	DstPort			1
+      }
     }
   }
 }

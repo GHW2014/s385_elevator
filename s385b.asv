@@ -22,7 +22,7 @@ function varargout = s385b(varargin)
 
 % Edit the above text to modify the response to help s385b
 
-% Last Modified by GUIDE v2.5 08-Apr-2014 00:47:01
+% Last Modified by GUIDE v2.5 07-Apr-2014 17:57:53
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -180,25 +180,15 @@ function figure1_CreateFcn(hObject, eventdata, handles)
     direction = 1
     run('s385');
     
-% --- Executes during object creation, after setting all properties.
-function mEdit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to mEdit (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-function mEdit_Callback(hObject, eventdata, handles)
-% hObject    handle to mEdit (see GCBO)
+% --- Executes on button press in mEqual2m.
+function mEqual2m_Callback(hObject, eventdata, handles)
+% hObject    handle to mEqual2m (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+wksp = get_param(s385b,'base');
+temp = wksp.getVariable('m');
+input = get(hObject, 'String');
+input_double = str2double(input);
+temp = intput_double;
 
-    input = get(hObject, 'String');
-    input_double = str2double(input);
-    assignin('base', 'm', input_double);
-% Hints: get(hObject,'String') returns contents of mEdit as text
-%        str2double(get(hObject,'String')) returns contents of mEdit as a double
+% Hint: get(hObject,'Value') returns toggle state of mEqual2m
