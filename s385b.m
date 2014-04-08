@@ -196,9 +196,21 @@ function mEdit_Callback(hObject, eventdata, handles)
 % hObject    handle to mEdit (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+    ws = 'base';
+    M1 = evalin(ws, 'M1');
+    M2 = evalin(ws, 'M2');
+    K = evalin(ws, 'K');
+    c = evalin(ws, 'c');
+    
+    syms s;
+    
     input = get(hObject, 'String');
-    input_double = str2double(input);
-    assignin('base', 'm', input_double);
+    input_dbl = str2double(input);
+    
+    den = sym2poly(s*(M1*(M2+input_dbl)*s^2 + (c*s+K)*(M1+M2+input_dbl)));
+    
+    assignin(ws, 'm', input_dbl);
+    assignin('base', 'den', den);
+    
 % Hints: get(hObject,'String') returns contents of mEdit as text
 %        str2double(get(hObject,'String')) returns contents of mEdit as a double

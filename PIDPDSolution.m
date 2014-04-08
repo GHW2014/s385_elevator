@@ -3,8 +3,6 @@ clc
 
 syms s
 
-
-
 % Initialization of the motor's transfer function.
 M1 = 150;
 M2 = 200;

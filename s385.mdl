@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.25"
+    ComputedModelVersion    "1.26"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [6.0, 1.0, 1631.0, 603.0]
+      Location		      [1244.0, 6.0, 1631.0, 603.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -56,7 +56,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1575.0, 368.0]
 	ZoomFactor		[1.25]
-	Offset			[43.333333333332824, 1.5666666666667197]
+	Offset			[43.3333333333328, 1.5666666666667197]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Nate"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Apr 08 00:59:08 2014"
-  RTWModifiedTimeStamp	  318819471
-  ModelVersionFormat	  "1.%<AutoIncrement:25>"
+  LastModifiedDate	  "Tue Apr 08 02:30:27 2014"
+  RTWModifiedTimeStamp	  318822949
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -864,7 +864,7 @@ Model {
   }
   System {
     Name		    "s385"
-    Location		    [6, 1, 1637, 604]
+    Location		    [1244, 6, 2875, 609]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1348,6 +1348,16 @@ Model {
       AutoView		      off
       VideoDimensions	      "[]"
       AllowVariableSize	      off
+      FigureProperties	      "{'Position', 'Name', 'Viewpoint', 'CameraBound', 'CameraDirection', 'CameraPosition', 'C"
+      "ameraUpVector', 'ZoomFactor', 'Antialiasing', 'Headlight', 'Lighting', 'NavPanel', 'StatusBar', 'ToolBar', 'Text"
+      "ures', 'Transparency', 'Triad', 'Wireframe', 'NavZones', 'NavMode', 'NavSpeed', 'CaptureFileFormat', 'CaptureFil"
+      "eName', 'Record2DCompressMethod', 'Record2DCompressQuality', 'Record2D', 'Record2DFileName', 'Record2DFPS'; [1.5"
+      "740000000000000e+03   6.0600000000000000e+02   1.2580000000000000e+03   1.1160000000000000e+03], '', 'look', 'on"
+      "', [0.0000000000000000e+00   0.0000000000000000e+00  -1.0000000000000000e+00], [0.0000000000000000e+00   0.00000"
+      "00000000000e+00   0.0000000000000000e+00], [0.0000000000000000e+00   1.0000000000000000e+00   0.0000000000000000"
+      "e+00], [1.0000000000000000e+00], 'on', 'on', 'on', 'halfbar', 'on', 'on', 'on', 'on', 'none', 'off', 'off', 'fly"
+      "', 'normal', 'tif', '%f_anim_%n.tif', 'auto', [7.5000000000000000e+01], 'off', '%f_anim_%n.avi', [1.500000000000"
+      "0000e+01]} "
     }
     Block {
       BlockType		      Gain
@@ -1355,7 +1365,7 @@ Model {
       SID		      "18"
       Position		      [140, 117, 200, 153]
       ZOrder		      -18
-      Gain		      "[\n1\n]"
+      Gain		      "[0]"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
