@@ -179,15 +179,7 @@ function figure1_CreateFcn(hObject, eventdata, handles)
     targets = [0, 0, 0, 0, 0, 0]
     direction = 1
     run('s385');
-
-% --- Executes on button press in mEqualm.
-function mEqualm_Callback(hObject, eventdata, handles)
-% hObject    handle to mEqualm (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of mEqualm
-
+    
 % --- Executes on button press in mEqual2m.
 function mEqual2m_Callback(hObject, eventdata, handles)
 % hObject    handle to mEqual2m (see GCBO)
