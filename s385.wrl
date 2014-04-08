@@ -1,0 +1,148 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF elevator Transform {
+	translation	0 0 0
+	children Transform {
+		translation	0 1.75 0
+		scale	1 1.75 1
+		children Shape {
+			appearance	Appearance {
+				material	Material {
+				}
+
+				texture	DEF Metal ImageTexture {
+					url	"texture/Metal.jpg"
+				}
+
+			}
+
+			geometry	Box {
+			}
+
+		}
+	}
+}
+Transform {
+	translation	0 0 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+Transform {
+	translation	0 3.5 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+Transform {
+	translation	0 7 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+Transform {
+	translation	0 10.5 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+Transform {
+	translation	0 14 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+Transform {
+	translation	0 17.5 0
+	scale	3 0.1 3
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+			texture	DEF Brick_Small ImageTexture {
+				url	"texture/Brick_2.jpg"
+			}
+
+		}
+
+		geometry	Box {
+		}
+
+	}
+}
+DEF look Viewpoint {
+	fieldOfView	0.75
+	position	0 10 40
+	description	"look"
+}
