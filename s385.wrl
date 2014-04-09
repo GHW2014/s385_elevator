@@ -96,7 +96,7 @@ DEF RC Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
@@ -185,7 +185,7 @@ DEF Floor2 Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
@@ -205,7 +205,7 @@ DEF Floor3 Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
@@ -225,7 +225,7 @@ DEF Floor4 Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
@@ -245,7 +245,7 @@ DEF Floor5 Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
@@ -265,7 +265,7 @@ DEF Floor6 Transform {
 			}
 
 			texture	DEF Brick_Small ImageTexture {
-				url	"texture/Brick_2.jpg"
+				url	"texture/Ciment.jpg"
 			}
 
 		}
